@@ -183,8 +183,8 @@ function writeScores() {
   // add benchmark scens to list, create a map where key = scen name, value = position of scen name in an [x, y] array
   for (var i = 0; i < cells.length; i++) {
     for (var j = 0; j < cells[i].length; j++) {
-      scens.push(cells[i][j].trim());
-      scenMap.set(cells[i][j].trim(), [startRow + i, startColumn + j]);
+      scens.push(cells[i][j].trim().toLowerCase());
+      scenMap.set(cells[i][j].trim().toLowerCase(), [startRow + i, startColumn + j]);
     }
   }
 
@@ -196,7 +196,7 @@ function writeScores() {
 
   // go through all played scens, update sheet with high scores
   for (var i = 0; i < userScens.length; i++) {
-    var uscen = userScens[i].group_by.task_name.trim(); // scen name
+    var uscen = userScens[i].group_by.task_name.trim().toLowerCase(); // scen name
     if (scens.includes(uscen)) { // if scen matches a benchmark scen...
       var maxScore = userScens[i].aggregate.max.score;
       var cellCoords = scenMap.get(uscen);
@@ -205,6 +205,7 @@ function writeScores() {
       var col = cellCoords[1] + 3;
       // write high score to coords
       sheet.getRange(row, col).setValue(maxScore);
+      
     }
   }
 
