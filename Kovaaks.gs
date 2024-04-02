@@ -172,7 +172,6 @@ function writeScores() {
 
   var scens = [];
 
-  // add benchmark scens to list, create a map where key = scen name, value = position of scen name in an [x, y] array
   for (var i = 0; i < cells.length; i++) {
     for (var j = 0; j < cells[i].length; j++) {
       scens.push(cells[i][j].trim());
