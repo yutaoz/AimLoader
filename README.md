@@ -4,7 +4,7 @@ Google Sheets extension to automagically update your AimLab benchmark scores
 ## Setup
 1. Open your benchmark sheet
 2. Open the extensions tab and click on apps script
-3. Copy the code in Code.gs to a new script
+3. Copy the code in Aimlab.gs or Kovaaks.gs to a new script
 4. Save the script and refresh the progress sheet
 
 ## Usage
