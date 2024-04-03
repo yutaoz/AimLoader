@@ -12,3 +12,4 @@ Google Sheets extension to automagically update your AimLab benchmark scores
 2. Read setup instructions and complete setup
 3. Scores should update every minute, click reload to update immediately
 
+- Note: It's probably a good idea to delete the extension once you're done using it and are switching to a different sheet or something. Google only lets you make x amount of api calls a day, so having it run on 5 different sheets might hit that limit. I'm working on figuring out a way to bypass this
