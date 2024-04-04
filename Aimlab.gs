@@ -151,6 +151,12 @@ function setupLoader() {
     var spreadsheetId = spreadsheet.getId();
     spreadsheetProperties.setProperty('sheetid', spreadsheetId);
     spreadsheetProperties.setProperty('sheetname', selectedSheetName);
+
+    var triggers = ScriptApp.getProjectTriggers();
+    for (var i = 0; i < triggers.length; i++) { // remove all time triggers before adding new one
+      ScriptApp.deleteTrigger(triggers[i]);
+    }
+
     createTriggers();
     SpreadsheetApp.getUi().alert("Setup Complete", SpreadsheetApp.getUi().ButtonSet.OK);
     writeScores(); // write score after setup
