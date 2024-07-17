@@ -1,6 +1,8 @@
 # AimLoader
 Google Sheets extension to automagically update your AimLab benchmark scores
 
+Note: the api key used in both of these is from a dummy account that is not on leaderboards -> will try to update with a new copy 
+
 ## Setup
 1. Open your benchmark sheet
 2. Open the extensions tab and click on apps script
